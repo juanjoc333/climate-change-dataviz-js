@@ -45,10 +45,16 @@ function setData(data) {
 		for (const cellData of row) {
 			const cellId = cellData.year + '-' + cellData.month;
 			const domCell = document.getElementById(cellId);
-			domCell.innerText = `${rank}`;
+			addListeners(domCell, rank, cellData.value);
 			rank++;
 		}
 	}
+}
+
+function addListeners(domCell, rank, value) {
+	domCell.innerText = `${rank}`;
+	domCell.onmouseover = (ev) => ev.target.innerText = value;
+	domCell.onmouseout = (ev) => ev.target.innerText = rank;
 }
 
 function* range(start, end) {
