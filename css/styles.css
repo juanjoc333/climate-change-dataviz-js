@@ -1,0 +1,38 @@
+body {
+    font-family: "Roboto Light", Arial, sans-serif;
+}
+
+h1 {
+    text-align: center;
+}
+
+.legend-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.legend {
+    width: 200px;
+    margin-left: 5px;
+    background-color: lightgray;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.color-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.color-list li {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+}
+
+.legend-text {
+    display: flex;
+    justify-content: space-between;
+}

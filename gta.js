@@ -22,6 +22,7 @@ function createGraphic(data) {
 	const dataTable = document.getElementById('data-table');
 	createYearsRows(dataTable);
 	setData(data);
+	generateLegendFromColors(colors);
 }
 
 function createYearsRows(dataTable, data) {
@@ -69,6 +70,15 @@ function addListeners(domCell, rank, value) {
 	domCell.innerText = `${rank}`;
 	domCell.onmouseover = (ev) => ev.target.innerText = value;
 	domCell.onmouseout = (ev) => ev.target.innerText = rank;
+}
+
+function generateLegendFromColors(colors) {
+	const legendContainer = document.getElementById('color-list');
+	colors.forEach((color) => {
+		const listNode = document.createElement('li');
+		listNode.style.backgroundColor = color
+		legendContainer.append(listNode)
+	})
 }
 
 function* range(start, end) {
