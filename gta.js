@@ -1,3 +1,16 @@
+const colors = [
+	'#d53e4f',
+	'#f46d43',
+	'#fdae61',
+	'#fee08b',
+	'#f6faaa',
+	'#e6f598',
+	'#abdda4',
+	'#66c2a5',
+	'#7ba5c7',
+	'#a17bc7'
+];
+
 window.onload = async function() {
 	const response = await fetch('./data/gta_data.json');
 	const data = await response.json();
@@ -46,6 +59,7 @@ function setData(data) {
 			const cellId = cellData.year + '-' + cellData.month;
 			const domCell = document.getElementById(cellId);
 			addListeners(domCell, rank, cellData.value);
+			domCell.style.backgroundColor = colors[rank - 1]
 			rank++;
 		}
 	}
