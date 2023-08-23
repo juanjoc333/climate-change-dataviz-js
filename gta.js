@@ -8,6 +8,7 @@ window.onload = async function() {
 function createGraphic(data) {
 	const dataTable = document.getElementById('data-table');
 	createYearsRows(dataTable);
+	setData(data);
 }
 
 function createYearsRows(dataTable, data) {
@@ -35,6 +36,18 @@ function createMonthsCells(rowNode, year) {
 		const monthNode = document.createElement('td');
 		monthNode.id = `${year}-${month + 1}`;
 		rowNode.append(monthNode);
+	}
+}
+
+function setData(data) {
+	for (const row of data) {
+		let rank = 1;
+		for (const cellData of row) {
+			const cellId = cellData.year + '-' + cellData.month;
+			const domCell = document.getElementById(cellId);
+			domCell.innerText = `${rank}`;
+			rank++;
+		}
 	}
 }
 
