@@ -6,6 +6,8 @@ This project was inspired by this course [How to Visualize Data with JavaScript
 
 I avoid using the `jQuery` library and just use vanilla Javascript.
 
+See this project live [here](https://juanjoc333.github.io/climate-change-dataviz-js/).
+
 ![final.png](assets/final.png)
 
 ## Data Source
