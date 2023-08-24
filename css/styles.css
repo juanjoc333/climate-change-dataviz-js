@@ -4,6 +4,7 @@ body {
 
 h1 {
     text-align: center;
+    margin: 10px;
 }
 
 .container {
@@ -50,15 +51,15 @@ h1 {
 }
 
 .data-table td {
-    height: 25px;
+    height: 20px;
     text-align: center;
     background-color: rgb(250, 250,250);
     border: 1px solid whitesmoke;
     padding: 1px;
-    font-size: 1em;
+    font-size: 0.9em;
 }
 
 .data-table th {
+    height: 20px;
     background-color: #ececec;
-    height: 25px;
 }
